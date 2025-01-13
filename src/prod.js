@@ -9,7 +9,7 @@ function fetchProducts(query) {
     return out;
 }
 
-// Функция для вывода товаров с пагинацией
+// Функция для вывода товаров с пагинацией да хуйня просто 3 вывожу может потом доделаю чтоб пользователь мог выбирать кол-во
 function showProductPage(page, products) {
     var pageSize = 3;
 
