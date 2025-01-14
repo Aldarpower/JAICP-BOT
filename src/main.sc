@@ -19,14 +19,15 @@ theme: /
 
     state: Confirm
         intent!: /Согласие
-        
         a: Вcе что нашел по запросу "{{$session.query}}"
         script:
             searchprod($session.query);
-    state: Decline
-        intent!: /нет
-        a: Хорошо, если вам что-то понадобится, просто дайте знать!
-
+    state: LastSearch
+        intent!: /Последний
+        a: Ваш последний запрос "{{$session.query}}"
+        script: 
+            searchprod($session.query);
+            
     state: Bye
         intent!: /пока
         a: Пока-пока!

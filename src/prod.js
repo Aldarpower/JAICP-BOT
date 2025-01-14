@@ -28,6 +28,7 @@ function showProductPage(page, products) {
     });
 
     $reactions.answer(message);
+    
 }
 
 function searchprod(query){
@@ -36,6 +37,7 @@ function searchprod(query){
                 if (response.status === "OK") {
                     var products = response.data.products;
                     showProductPage(0, products); // Показываем первую страницу
+                    
                 } else {
                     $reactions.answer("Ошибка при получении данных: " + response.data.status);
                 }

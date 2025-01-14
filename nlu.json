@@ -47,6 +47,22 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
+    "path" : "/Последний",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "последний раз"
+    }, {
+      "text" : "что я искал"
+    }, {
+      "text" : "На чем я остановился"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
