@@ -8,7 +8,7 @@ theme: /
         q!: $regex</start>
         a: Приветствую, я могу найти необходимые вам товары.
 
-    state: Searchф
+    state: Search
         intent!: /Поиск
         script:
             // Извлекаем ключевую часть запроса
