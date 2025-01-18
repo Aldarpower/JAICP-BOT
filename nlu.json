@@ -84,6 +84,132 @@
       "refs" : [ ]
     },
     "priority" : 0
+  }, {
+    "path" : "/Повседневный",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Обычный"
+    }, {
+      "text" : "Повседневный"
+    }, {
+      "text" : "Простой"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/Спортивная",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Спортивная"
+    }, {
+      "text" : "спорт"
+    }, {
+      "text" : "активная"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/РазмерОдежды",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Мой размер одежды"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/Сезон",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Зима"
+    }, {
+      "text" : "Осень"
+    }, {
+      "text" : "Лето"
+    }, {
+      "text" : "Весна"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/Классическая",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Классику"
+    }, {
+      "text" : "строгую"
+    }, {
+      "text" : "офисную"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/РазмерОбуви",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Мой размер обуви "
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/Холодно",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "холодно"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/Тепло",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Тепло"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/Жарко",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Жарко"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
   } ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],

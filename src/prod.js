@@ -1,7 +1,7 @@
 function fetchProducts(query) {
-    var out = $http.get("https://real-time-product-search.p.rapidapi.com/search?country=ru&q=" + encodeURIComponent(query) + "&language=ru&page=1&limit=3&sort_by=BEST_MATCH&product_condition=ANY&min_rating=ANY", {
+    var out = $http.get("https://real-time-product-search.p.rapidapi.com/search?country=ru&q=" + encodeURIComponent(query) + "&language=ru&page=1&limit=1&sort_by=BEST_MATCH&product_condition=ANY&min_rating=ANY", {
         headers: {
-            'x-rapidapi-key': 'a7359e1b8emsh73a5a4e297b19b5p1e2a53jsnedcab4f7b3ac', // Замените на ваш ключ
+            'x-rapidapi-key': 'a836a3e9a6mshd73490b59ae3d20p1eac94jsn136c5e3ada64', // Замените на ваш ключ
             'x-rapidapi-host': 'real-time-product-search.p.rapidapi.com'
         },
         timeout: 10000
@@ -11,7 +11,7 @@ function fetchProducts(query) {
 
 // Функция для вывода товаров с пагинацией да хуйня просто 3 вывожу может потом доделаю чтоб пользователь мог выбирать кол-во
 function showProductPage(page, products) {
-    var pageSize = 3;
+    var pageSize = 1;
 
     // Вычисляем индекс начала и конца текущей страницы
     var startIndex = page * pageSize;
@@ -44,4 +44,20 @@ function searchprod(query){
             }).catch(function(error) {
                 $reactions.answer("Ошибка сети: " + error.message);
             });
+}
+
+function fetchRecomendation(season, feeling, style){
+    var out = $http.get("aldarpower.pythonanywhere.com/api/clothing/all?season="+encodeURIComponent(season)+"&feeling="+encodeURIComponent(feeling)+"&style="+encodeURIComponent(style));
+    var result = out.data.recommendations;
+    var message = result.join(", ");
+    var newmessage = "Рекомендуем купить: \n" + message;
+    $reactions.answer(newmessage);
+    return result;
+}
+
+function serchprodbyrecomendations(arr)
+{
+    arr.forEach(function(recommendation) {
+        searchprod(recommendation);
+    });    
 }
