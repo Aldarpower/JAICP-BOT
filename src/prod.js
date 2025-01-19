@@ -32,7 +32,7 @@ function showProductPage(page, products) {
 }
 
 function searchprod(query, size){
-    var g = query + " " + size + " размера";
+    var g = query + "  " + size + " размера";
             fetchProducts(g).then(function(response) {
                 if (response.status === "OK") {
                     var products = response.data.products;
