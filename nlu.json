@@ -28,6 +28,16 @@
     "shared" : false,
     "phrases" : [ {
       "text" : "Нужны"
+    }, {
+      "text" : "нужно"
+    }, {
+      "text" : "найди"
+    }, {
+      "text" : "хочу"
+    }, {
+      "text" : "поищи"
+    }, {
+      "text" : "купить"
     } ],
     "classificationRules" : {
       "refs" : [ ]
@@ -94,6 +104,10 @@
       "text" : "Повседневный"
     }, {
       "text" : "Простой"
+    }, {
+      "text" : "базовый"
+    }, {
+      "text" : "Минималистичные"
     } ],
     "classificationRules" : {
       "refs" : [ ]
@@ -110,6 +124,22 @@
       "text" : "спорт"
     }, {
       "text" : "активная"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "path" : "/Сохранить",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "запомни"
+    }, {
+      "text" : "сохрани"
+    }, {
+      "text" : "добавь в корзину"
     } ],
     "classificationRules" : {
       "refs" : [ ]
@@ -163,18 +193,6 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
-    "path" : "/РазмерОбуви",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "Мой размер обуви "
-    } ],
-    "classificationRules" : {
-      "refs" : [ ]
-    },
-    "patterns" : [ ],
-    "priority" : 0
-  }, {
     "path" : "/Холодно",
     "enabled" : true,
     "shared" : false,
@@ -211,7 +229,22 @@
     "patterns" : [ ],
     "priority" : 0
   } ],
-  "entities" : [ ],
+  "entities" : [ {
+    "entity" : {
+      "name" : "Новая_сущность",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ ]
+  } ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {

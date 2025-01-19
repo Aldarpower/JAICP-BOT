@@ -1,0 +1,59 @@
+{
+  "positions" : [ {
+    "id" : "/Start",
+    "x" : 290,
+    "y" : 715
+  }, {
+    "id" : "/waitForClothingSize",
+    "x" : 290,
+    "y" : 1476
+  }, {
+    "id" : "/choiseCasual",
+    "x" : 290,
+    "y" : 2238
+  }, {
+    "id" : "/choiseClassic",
+    "x" : 290,
+    "y" : 2968
+  }, {
+    "id" : "/choiseSport",
+    "x" : 290,
+    "y" : 3698
+  }, {
+    "id" : "/Cold",
+    "x" : 290,
+    "y" : 4444
+  }, {
+    "id" : "/Norm",
+    "x" : 290,
+    "y" : 5206
+  }, {
+    "id" : "/Warm",
+    "x" : 290,
+    "y" : 5968
+  }, {
+    "id" : "/waitForSeason",
+    "x" : 290,
+    "y" : 6692
+  }, {
+    "id" : "/Search",
+    "x" : 290,
+    "y" : 7437
+  }, {
+    "id" : "/Confirm",
+    "x" : 290,
+    "y" : 8193
+  }, {
+    "id" : "/LastSearch",
+    "x" : 290,
+    "y" : 8892
+  }, {
+    "id" : "/Bye",
+    "x" : 290,
+    "y" : 9537
+  }, {
+    "id" : "/NoMatch",
+    "x" : 290,
+    "y" : 10149
+  } ]
+}

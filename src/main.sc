@@ -14,11 +14,6 @@ theme: /
         script:
             $session.clothingSize = $request.query.match(/\d+/)[0]; // Сохраняем только числовое обозначение размера одежды
         a: теперь ваш размер одежды равен "{{$session.clothingSize}}"   
-    state: waitForShoeSize
-        intent!: /РазмерОбуви
-        script:
-            $session.shoeSize = $request.query.match(/\d+/)[0]; // Сохраняем только числовое обозначение размера обуви
-        a: теперь ваш размер обуви равен "{{$session.shoeSize}}"
     
     
     
@@ -37,9 +32,6 @@ theme: /
         script:
             $session.userstyle = 'спортивная';
         a: Я запомню что вы предпочитаете спортивную одежду
-    
-    
-    
     
     
     
@@ -71,7 +63,7 @@ theme: /
         script:
             $session.season = $request.query; // Сохраняем введенный сезон
             $session.lastrecomendarray  = fetchRecomendation($session.season, $session.feeling, $session.userstyle);
-            serchprodbyrecomendations($session.lastrecomendarray);
+            serchprodbyrecomendations($session.lastrecomendarray, $session.clothingSize);
     
     
 
@@ -91,7 +83,7 @@ theme: /
         intent!: /Согласие
         a: Вcе что нашел по запросу "{{$session.query}}"
         script:
-            searchprod($session.query);
+            searchprod($session.query, $session.clothingSize);
     state: LastSearch
         intent!: /Последний
         a: Ваш последний запрос "{{$session.query}}"

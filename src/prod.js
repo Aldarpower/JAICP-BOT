@@ -31,8 +31,8 @@ function showProductPage(page, products) {
     
 }
 
-function searchprod(query){
-    var g = query;
+function searchprod(query, size){
+    var g = query + " " + size + " размера";
             fetchProducts(g).then(function(response) {
                 if (response.status === "OK") {
                     var products = response.data.products;
@@ -55,9 +55,9 @@ function fetchRecomendation(season, feeling, style){
     return result;
 }
 
-function serchprodbyrecomendations(arr)
+function serchprodbyrecomendations(arr, size)
 {
     arr.forEach(function(recommendation) {
-        searchprod(recommendation);
+        searchprod(recommendation, size);
     });    
 }
