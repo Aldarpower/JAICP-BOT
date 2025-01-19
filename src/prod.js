@@ -55,6 +55,15 @@ function fetchRecomendation(season, feeling, style){
     return result;
 }
 
+function fetchbystile(style){
+    var out = $http.get("aldarpower.pythonanywhere.com/api/clothing/style?style="+encodeURIComponent(style));
+    var result = out.data.recommendations;
+    var message = result.join(", ");
+    var newmessage = "Рекомендуем купить: \n" + message;
+    $reactions.answer(newmessage);
+    return result;
+}
+
 function serchprodbyrecomendations(arr, size)
 {
     arr.forEach(function(recommendation) {

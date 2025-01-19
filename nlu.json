@@ -147,6 +147,20 @@
     "patterns" : [ ],
     "priority" : 0
   }, {
+    "path" : "/Рекомендации",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Порекомендуй"
+    }, {
+      "text" : "Посоветуй"
+    } ],
+    "classificationRules" : {
+      "refs" : [ ]
+    },
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
     "path" : "/РазмерОдежды",
     "enabled" : true,
     "shared" : false,

@@ -65,7 +65,13 @@ theme: /
             $session.lastrecomendarray  = fetchRecomendation($session.season, $session.feeling, $session.userstyle);
             serchprodbyrecomendations($session.lastrecomendarray, $session.clothingSize);
     
-    
+    state: recomend
+        intent!: /Рекомендации
+        a: Давайте посмотрим что я могу вам посоветовать.
+        script:
+            $session.lastrecomendarray  = fetchbystile($session.userstyle);
+            serchprodbyrecomendations($session.lastrecomendarray, $session.clothingSize);
+        
 
 
 
