@@ -74,7 +74,7 @@ theme: /
         intent!: /Поиск
         script:
             // Извлекаем ключевую часть запроса
-            $session.query = $request.query.replace(/(нужны|)/gi, "").trim();
+            $session.query = $request.query.replace(/(нужны|нужно|найди|поищи)/gi, "").trim();
             $session.query = $session.query.charAt(0).toUpperCase() + $session.query.slice(1); // Делаем первую букву заглавной
         a: Вы хотите найти "{{$session.query}}"?
         event: confirm
