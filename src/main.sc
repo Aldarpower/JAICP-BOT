@@ -14,7 +14,7 @@ theme: /
         script:
             var size = $parseTree._size;
             $session.clothingSize = size;
-            $reactions.answer("Новый "+size);
+            $reactions.answer("Запомнил ваш новый размер одежды ="+size);
         
     state: choiseCasual
         intent!: /Повседневный
