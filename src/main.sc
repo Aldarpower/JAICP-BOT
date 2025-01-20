@@ -12,11 +12,10 @@ theme: /
     state: waitForClothingSize
         intent!: /РазмерОдежды
         script:
-            $session.clothingSize = $request.query.match(/\d+/)[0]; // Сохраняем только числовое обозначение размера одежды
-        a: теперь ваш размер одежды равен "{{$session.clothingSize}}"   
-    
-    
-    
+            var size = $parseTree._size;
+            $session.clothingSize = size;
+            $reactions.answer("Новый "+size);
+        
     state: choiseCasual
         intent!: /Повседневный
         script:
@@ -32,11 +31,7 @@ theme: /
         script:
             $session.userstyle = 'спортивная';
         a: Я запомню что вы предпочитаете спортивную одежду
-    
-    
-    
-    
-    
+
     state: Cold
         intent!: /Холодно
         script:
@@ -73,9 +68,6 @@ theme: /
             serchprodbyrecomendations($session.lastrecomendarray, $session.clothingSize);
         
 
-
-
-    
     state: Search
         intent!: /Поиск
         script:
@@ -95,9 +87,6 @@ theme: /
         a: Ваш последний запрос "{{$session.query}}"
         script: 
             searchprod($session.query);
-    
-    
-    
     
      
     state: Bye

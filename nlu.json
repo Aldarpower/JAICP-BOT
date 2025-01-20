@@ -99,36 +99,36 @@
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
-      "text" : "Обычный"
-    }, {
-      "text" : "Повседневный"
-    }, {
-      "text" : "Простой"
-    }, {
-      "text" : "базовый"
-    }, {
-      "text" : "Минималистичные"
+      "text" : "@Повседневность"
     } ],
     "classificationRules" : {
       "refs" : [ ]
     },
     "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Повседневный",
+      "entity" : "Повседневность",
+      "required" : true,
+      "prompts" : [ ]
+    } ],
     "priority" : 0
   }, {
     "path" : "/Спортивная",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
-      "text" : "Спортивная"
-    }, {
-      "text" : "спорт"
-    }, {
-      "text" : "активная"
+      "text" : "@Спорт"
     } ],
     "classificationRules" : {
       "refs" : [ ]
     },
     "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Спорт",
+      "entity" : "Спорт",
+      "required" : true,
+      "prompts" : [ ]
+    } ],
     "priority" : 0
   }, {
     "path" : "/Сохранить",
@@ -165,12 +165,18 @@
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
-      "text" : "Мой размер одежды"
+      "text" : "Мой размер одежды @duckling.number"
     } ],
     "classificationRules" : {
       "refs" : [ ]
     },
     "patterns" : [ ],
+    "slots" : [ {
+      "name" : "size",
+      "entity" : "duckling.number",
+      "required" : true,
+      "prompts" : [ "Введите размер" ]
+    } ],
     "priority" : 0
   }, {
     "path" : "/Сезон",
@@ -195,16 +201,18 @@
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
-      "text" : "Классику"
-    }, {
-      "text" : "строгую"
-    }, {
-      "text" : "офисную"
+      "text" : "@Классика"
     } ],
     "classificationRules" : {
       "refs" : [ ]
     },
     "patterns" : [ ],
+    "slots" : [ {
+      "name" : "Классическая",
+      "entity" : "Классика",
+      "required" : true,
+      "prompts" : [ ]
+    } ],
     "priority" : 0
   }, {
     "path" : "/Холодно",
@@ -245,7 +253,7 @@
   } ],
   "entities" : [ {
     "entity" : {
-      "name" : "Новая_сущность",
+      "name" : "Размер",
       "enabled" : true,
       "shared" : false,
       "type" : "annotation",
@@ -257,9 +265,94 @@
       "client" : false,
       "hidden" : false
     },
-    "records" : [ ]
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "5", "Пять", "Файв" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "52", "Пятьдесят два" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Повседневность",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Неброская", "Неброскую" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Обыная" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Простая", "Простую" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Минималистичная" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Спорт",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Спорт", "Спортивная", "Спортом" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Активность", "Активно", "Активным" ],
+      "value" : ""
+    } ]
+  }, {
+    "entity" : {
+      "name" : "Классика",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false,
+      "hidden" : false
+    },
+    "records" : [ {
+      "type" : "synonyms",
+      "rule" : [ "Классическую", "Классическая" ],
+      "value" : ""
+    }, {
+      "type" : "synonyms",
+      "rule" : [ "Парадная", "Парадную", "Торжественную", "Торжественная" ],
+      "value" : ""
+    } ]
   } ],
-  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
+  "enabledSystemEntities" : [ "pymorphy.numb", "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {
     "name" : "mystem.geo",
@@ -284,7 +377,7 @@
     "enabled" : false
   }, {
     "name" : "pymorphy.numb",
-    "enabled" : false
+    "enabled" : true
   }, {
     "name" : "pymorphy.intg",
     "enabled" : false
